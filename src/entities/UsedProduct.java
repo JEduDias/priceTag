@@ -12,8 +12,9 @@ public class UsedProduct extends Product {
 		super();
 	}
 
-	public UsedProduct(Date manufactureDate) {
-		super();
+	
+	public UsedProduct(String name, Double price, Date manufactureDate) {
+		super(name, price);
 		this.manufactureDate = manufactureDate;
 	}
 
@@ -27,7 +28,7 @@ public class UsedProduct extends Product {
 	
 	@Override
 	public String priceTag() {
-		return getName() + "(used) $ " + getPrice() + "(Manufacture date: " + manufactureDate + ")";
+		return name + "(used) $ " + String.format("%.2f", price) + "(Manufacture date: " + sdf.format(manufactureDate) + ")";
 	}
 	
 }
