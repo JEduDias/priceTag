@@ -11,7 +11,6 @@ public class UsedProduct extends Product {
 	public UsedProduct() {
 		super();
 	}
-
 	
 	public UsedProduct(String name, Double price, Date manufactureDate) {
 		super(name, price);
@@ -30,5 +29,4 @@ public class UsedProduct extends Product {
 	public String priceTag() {
 		return name + "(used) $ " + String.format("%.2f", price) + "(Manufacture date: " + sdf.format(manufactureDate) + ")";
 	}
-	
 }

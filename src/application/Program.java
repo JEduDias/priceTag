@@ -7,7 +7,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-
 import entities.ImportedProduct;
 import entities.Product;
 import entities.UsedProduct;
@@ -24,6 +23,7 @@ public class Program {
 		
 		System.out.print("Enter the number of products:");
 		int N = sc.nextInt();
+		
 		for (int i=0; i<N; i++) {
 			System.out.println("Product #"+ (i+1) + " data:");
 			System.out.print("Common, used or imported (c/u/i)? ");
@@ -33,6 +33,7 @@ public class Program {
 			String name = sc.nextLine();
 			System.out.print("Price: ");
 			Double price = sc.nextDouble();
+			
 			if (status == 'u') {
 				System.out.print("Manufacture date (DD/MM/YYYY): ");
 				Date manufactureDate = sdf.parse(sc.next());
@@ -47,8 +48,6 @@ public class Program {
 				Product product = new Product(name, price);
 				list.add(product);
 			}
-			
-			
 			
 		}
 		System.out.println();
